@@ -9,10 +9,11 @@ import RockPaperScissors from "./pages/RockPaperScissors";
 import MemoryGame from "./pages/MemoryGame";
 import Navbar from "./components/Navbar";
 import { Toaster } from "./components/ui/toaster";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="App min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex flex-col">
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -24,6 +25,7 @@ function App() {
           <Route path="/memory" element={<MemoryGame />} />
         </Routes>
         <Toaster />
+        <Footer />
       </BrowserRouter>
     </div>
   );
